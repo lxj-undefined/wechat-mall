@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"斑马会员",
+  "usingComponents": {
+    "MyTitle":"../../components/MyTitle/MyTitle"
+  }
+}

@@ -1,0 +1,56 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+    <!--公共头部-->
+    <MyTitle></MyTitle>
+    <!--图片(轮播图)-->
+    <view class="slides">
+        <swiper autoplay circular>
+            <swiper-item wx:for="{{goodsDetail.swiperList}}" wx:key="{{index}}">
+                <navigator>
+                    <image mode="widthFix" src="{{item.imgSrc}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!--详情信息-->
+    <view class="goodsInfo">
+        <view class="price_block">
+            <view class="dis_price">￥{{goodsDetail.disPrice}}<text>优惠价</text></view>
+            <view class="pro_price">价格:{{goodsDetail.proPrice}}</view>
+        </view>
+        <view class="pro_name">{{goodsDetail.proName}}</view>
+        <!--产地和销量-->
+        <view class="adress_info">
+            <view class="adress">发货地:{{goodsDetail.proAdress}}</view>
+            <view class="pay_count">销量:{{goodsDetail.payCount}}</view>
+        </view>
+        <view class="detail_img">
+            <view class="img_list" wx:for="{{goodsDetail.detailImgList}}" wx:key="{{index}}">
+                <image mode="widthFix" src="{{item.imgSrc}}"></image>
+            </view>
+        </view>
+    </view>
+    <!--自定义组件:功能栏-->
+    <view class="footer">
+        <!--首页-->
+        <navigator bindtap="toIndex" open-type="switchTab">
+            <image src="../../icons/tabBar/index_selected.png"></image>
+        </navigator>
+        <!--客服-->
+        <navigator >
+            <image src="../../icons/tabBar/service.png"></image>
+        </navigator>
+        <!--购物车-->
+        <navigator bindtap="toCart" open-type="switchTab">
+            <image src="../../icons/tabBar/cart_selected.png"></image>
+        </navigator>
+        <!--加入购物车-->
+        <navigator class="add_to_cart" bindtap="addToCart" data-id="{{goodsDetail.id}}">
+            <view class="text">加入购物车</view>
+        </navigator>
+        <!--立即购买-->
+        <navigator class="buy" bindtap="justBuy">
+            <view class="text">立即购买</view>
+        </navigator>
+    </view>
+</view>

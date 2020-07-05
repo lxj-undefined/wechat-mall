@@ -1,0 +1,126 @@
+/* pages/me/me.wxss */
+page{
+    background-color: #fff;
+    color: #000;
+    font-size: 23rpx;
+}
+.user_info_wrap{
+    height: 45vh;
+    background-color: #000;
+    position: relative;
+}
+.user_img_wrap{
+    position: relative;
+}
+.user_bg{
+    height: 45vh;
+    width: 100%;
+    /*高斯模糊*/
+    filter: blur(10px);
+}
+.user_info{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    text-align: center;
+}
+.user_icon{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.user_name{
+    color: #fff;
+    font-size: 36rpx;
+    margin-top: 30rpx;
+}
+/*没有用户数据的时候显示按钮*/
+.user_btn{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 40%;
+    background: #ff9800;
+    font-size: 53rpx;
+    width: 200rpx;
+    text-align: center;
+    border-radius: 15rpx;
+}
+/*订单及共功能列表*/
+.user_content{
+    position: relative;
+}
+.user_main{
+    position: absolute;
+    width: 90%;
+    left:50%;
+    transform: translateX(-50%);
+    top: -40rpx;
+}
+.my_order_wrap{
+    background-color: #fff;
+    /*
+    border-radius: 15rpx;
+    */
+    padding: 15rpx;
+    border: 1px solid #fff;
+}
+.order_title{
+    padding: 15rpx;
+    border-bottom: 1rpx solid #ff9800;
+    font-size: 27rpx;
+}
+.order_content{
+    display: flex;
+}
+.my_order_wrap navigator{
+    flex: 1;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.my_order_img{
+    width: 60rpx;
+    height: 60rpx;
+}
+/*收货地址管理*/
+.address_wrap{
+    margin-top: 30rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    font-size: 27rpx;
+    border-radius: 15rpx;
+    border: 1px solid #fff;
+}
+/*miniApp相关信息*/
+.app_info_wrap{
+    margin-top: 30rpx;
+    background-color: #fff;
+    padding: 0rpx 20rpx 20rpx 20rpx;
+    font-size: 27rpx;
+    border-radius: 15rpx;
+    border: 1px solid #fff;
+}
+.app_info_item{
+    border-bottom: 1rpx solid #ff9800;
+    padding: 20rpx;
+}
+/*分享*/
+.introduction_wrap{
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    font-size: 27rpx;
+    border-radius: 15rpx;
+    border: 1px solid #fff;
+}
+/*会元样式*/
+.vip_num{
+    color: #ff9800;
+    font-size: 27rpx;
+}
+.vip_border{
+    border: 1rpx solid #ff9800;
+}

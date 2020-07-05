@@ -1,0 +1,80 @@
+<view class="user_info_wrap">
+    <view class="user_img_wrap" wx:if="{{user_info.nickName}}">
+        <image class="user_bg" src="{{user_info.avatarUrl}}"></image>
+        <view class="user_info">
+            <image class="user_icon {{user_info.isVip?'vip_border':''}}" src="{{user_info.avatarUrl}}"></image>
+            <view class="user_name">{{user_info.nickName}}</view>
+            <view class="vip_info_wrap" wx:if="{{user_info.isVip}}">
+                <view class="vip_level">
+                    会员等级<text class="vip_num">Lv{{user_info.vipLevel}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="user_btn" wx:else>
+        <navigator url="/pages/login/login">
+            登录
+        </navigator>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <!--我的订单-->
+        <view class="my_order_wrap">
+            <view class="order_title">我的订单</view>
+            <view class="order_content">
+                <navigator url="/pages/order/order?type=1">
+                    <image class="my_order_img" src="../../icons/all_order.png"></image>
+                    <view>全部订单</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=2">
+                    <image class="my_order_img" src="../../icons/wait_for_pay.png"></image>
+                    <view>待付款</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=3">
+                    <image class="my_order_img" src="../../icons/wait_for_take.png"></image>
+                    <view>待收货</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=4">
+                    <image class="my_order_img" src="../../icons/replace_goods.png"></image>
+                    <view>退货/换货</view>
+                </navigator>
+            </view>
+        </view>
+        <!--收获地址管理-->
+        <view class="address_wrap">
+            <navigator>
+                <view>
+                    收货地址管理
+                </view>
+            </navigator>
+        </view>
+        <!--miniApp相关的信息-->
+        <view class="app_info_wrap">
+            <!--联系客服-->
+            <view class="app_info_item">
+                <navigator>
+                    联系客服
+                </navigator>
+            </view>
+            <!--意见反馈-->
+            <view class="app_info_item">
+                <navigator>
+                    意见反馈
+                </navigator>
+            </view>
+            <!--关于小程序-->
+            <view class="app_info_item">
+                <navigator>
+                    关于小程序
+                </navigator>
+            </view>
+        </view>
+        <!--分享-->
+        <view class="introduction_wrap">
+            <navigator>
+                推荐给朋友
+            </navigator>
+        </view>
+    </view>
+</view>

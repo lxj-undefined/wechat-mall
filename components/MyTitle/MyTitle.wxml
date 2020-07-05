@@ -1,0 +1,14 @@
+<view class="my_title">
+    <!--logo-->
+    <navigator class="logo">
+        <image class="logo_img" src="../../icons/logo.png"></image>
+    </navigator>
+    <!--搜索-->
+    <view class="search_icon">
+        <navigator url="../../pages/search/search">
+          <image style="width: 50rpx;height: 50rpx;"
+            src="../../icons/search.png">
+          </image>
+        </navigator>
+    </view>
+</view>

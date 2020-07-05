@@ -1,0 +1,27 @@
+<!--pages/classify/classify.wxml-->
+<view>
+  <view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <!-- 最初始时的搜索框 -->
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" /> </view>
+        <!-- 可编辑时的搜索框 -->
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">消息</view>
+        </label>
+      </view>
+      <!-- 取消搜索 -->
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+
+<view class="cart-content">
+    <image src="/images/cart_null.png" class="cart-icon" mode="widthFix"></image>
+    <text>暂无消息</text>
+</view>
+
+
+  </view>
+</view>

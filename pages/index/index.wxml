@@ -1,0 +1,47 @@
+<view class="main">
+    <!--公共头部-->
+    <MyTitle>斑马会员</MyTitle>
+
+    <!--首页导航-->
+    <view class="nav_wrap">
+        <!--自己滚动区域的组件-->
+        <scroll-view class="nav" scroll-x>
+            <view bindtap="activeNav" 
+            data-index="{{index}}"
+            class="nav_item {{index===currentIndexNav?'active':''}}" 
+            wx:for="{{categoriesList}}" wx:key="{{index}}">
+                {{item.text}}
+            </view>
+        </scroll-view>
+    </view>
+
+    <!--轮播图-->
+    <view class="slides">
+        <swiper autoplay indicator-dots="true" circular>
+            <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+                <navigator>
+                    <image mode="widthFix" src="{{item.imgSrc}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <!--商品列表-->
+    <view class="goods_wrap">
+        <navigator url="../detail/detail?id={{item.id}}" class="goods_item" wx:for="{{goodsList}}" wx:key="{{index}}">
+            <!--图片容器-->
+            <view class="goods_img">
+                <!--图片-->
+                <image mode="widthFix" src="{{item.imgSrc}}"></image>
+            </view>
+            <!--标题-->
+            <view class="goods_title">{{item.proName}}</view>
+            <view class="goods_info">
+                <!--价格-->
+                <view class="price">{{item.proPrice}}</view>
+                <!--销量-->
+                <view class="pay_count">{{item.payCount}}人付款</view>
+            </view>
+        </navigator>
+    </view>
+</view>

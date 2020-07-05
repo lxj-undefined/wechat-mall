@@ -1,0 +1,33 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+    <view class="order_main">
+        <view wx:for="{{order}}" wx:key="order_id" class="order_item">
+
+            <view class="order_no_row">
+                <view class="order_no_text">订单编号</view>
+                <view class="order_no_value">{{item.orderId}}</view>
+            </view>
+            <view class="order_name_row">
+                <view class="order_no_text">商品名称</view>
+                <view class="order_no_value">{{item.proName}}</view>
+            </view>
+            <view class="order_num_row">
+                <view class="order_no_text">数量</view>
+                <view class="order_no_value">{{item.num}}</view>
+            </view>
+            <view class="order_price_row">
+                <view class="order_price_text">订单价格</view>
+                <view class="order_price_value">￥{{item.totalPrice}}</view>
+            </view>
+            <!--无会员时不显示-->
+            <view class="order_discount_row" wx:if="{{item.discount!=1}}">
+                <view class="order_discount_text">会员折扣</view>
+                <view class="order_discount_value">{{item.discount*10}}折</view>
+            </view>
+            <view class="order_time_row">
+                <view class="order_time_text">订单日期</view>
+                <view class="order_time_value">{{item.createDate}}</view>
+            </view>
+
+        </view>
+    </view>
+</Tabs>

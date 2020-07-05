@@ -1,0 +1,3 @@
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="getVipUserInfo">会员登录</button>
